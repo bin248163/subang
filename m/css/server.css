@@ -1,0 +1,66 @@
+.server-img{
+	height: 626px;
+	background: url(../images/server-img/server-img.jpg) no-repeat center;
+}
+.server-ban .ban1{
+	background:url(http://all.4000010000.com/pImg/server-img/banner1.jpg) center no-repeat;
+}
+.server-ban .ban2{
+	background:url(http://all.4000010000.com/pImg/server-img/banner2.jpg) center no-repeat;
+}
+.ser-tab .tab-t li{
+	width: 16.6%;
+	font-size: 14px;
+	margin-bottom: 1px;
+}
+.ser-tab .tab-t li span{
+}
+.ser-tab .tab-t li:first-child span{
+	border-left: 0!important;
+}
+.ser-tab .tab-t li:last-child span{
+	border-right: 0!important;
+}
+.line{
+	overflow: hidden;
+	padding: 6px 2%;
+}
+.line a,
+.line span{
+	float: left;
+	font-size: 12px;
+}
+.line p{
+	float: right;
+	font-size: 12px;
+}
+.server .pro-box{
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+/*服务切换*/
+.server .pro-box{
+	padding: 0 2%;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+.item-tab{
+	padding: 10px 1%;
+}
+.item-tab div{
+	overflow: hidden;
+	line-height: 24px;
+	border-bottom: solid 1px #dfdfdf;
+}
+.item-tab div:last-child{
+	border-bottom: solid 1px #dfdfdf;
+}
+.item-tab div span:first-child{
+	font-size: 12px;
+	float: left;
+}
+.item-tab div span:last-child{
+	font-size: 11px;
+	float: right;
+}

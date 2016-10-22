@@ -1,0 +1,169 @@
+.finger-img{
+	height: 626px;
+	background: url(../images/finger-img/finger-img.jpg) no-repeat center;
+}
+.finger .sub-main .l-con .ser-net dd span{
+	padding-left: 14px;
+	background: url(../images/square2.png) no-repeat center left;
+}
+.finger .sub-main .l-con .ser-net dt{
+	color: #767676;
+	background: #eee;
+	cursor: pointer;
+}
+.finger .sub-main .l-con .ser-net .cur-tt{
+	color: #fff;
+	background: url(../images/gradient.png) no-repeat center;
+}
+.finger .sub-main .l-con .ser-net .current{
+	color: #c6040d;
+	background: url(../images/square-r.png) no-repeat center left;
+}
+.finger .sub-main .l-con .ser-net dt .add{
+	padding-left: 18px;
+	background: url(../images/hide.png) no-repeat center left;
+}
+.finger .sub-main .l-con .ser-net dd{
+	cursor: pointer;
+	padding-left: 10px;
+}
+.finger .sub-main .l-con .ser-net dt{
+	border-bottom: 0px;
+}
+/**/
+.fig-ban{
+	height: 300px;
+	background: url(../images/finger-img/finger-ban.jpg) no-repeat center;
+}
+.fig-ban2{
+	height: 305px;
+	background: url(../images/finger-img/finger-ban2.jpg) no-repeat center;
+}
+.give{
+	height: 302px;
+	background: url(../images/finger-img/give.jpg) no-repeat center;
+}
+.grey-bg{
+	background: #5e5e5e;
+}
+.red-bg{
+	background: #ca040d;
+}
+.grey-bg,
+.red-bg{
+	color: #fff;
+	font-size: 16px;
+	line-height: 32px;
+	margin-top: 24px;
+	text-align: center;
+	margin-bottom: 18px;
+	letter-spacing: 2px;
+}
+.fin-con{
+	padding: 0 2%;
+}
+.fin-con .mb1 img{
+	width: 100%;
+	margin-bottom: 2px;
+}
+.fin-con p{
+	font-size: 20px;
+	text-align: center;
+}
+.fin-con p span{
+	color: #fe0000;
+}
+.fin-con .overf img{
+	width: 100%;
+	float: left;
+	padding: 20px 38px 20px 16px;
+}
+.fin-con .see{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.fin-con .see .l-con,
+.fin-con .see .r-con{
+	width: 46%;
+	float: left;
+	margin: 0 1%;
+}
+.fin-con .see .l-con p,
+.fin-con .see .r-con p{
+	font-size: 12px;
+	line-height: 30px;
+}
+.fin-con .see .l-con img,
+.fin-con .see .r-con img{
+	width: 100%;
+}
+/**/
+.jianshe{
+	width: 435px;	
+}
+.color{
+	width: 50%;
+	margin: 30px auto 30px auto;
+}
+.color-txt{
+	overflow: hidden;
+}
+.many-c{
+	width: 100%;
+	margin: auto;
+}
+/**/
+.fin-case{
+	overflow: hidden;
+}
+.fin-case img{
+	width: 23%;
+	float: left;
+	margin: 0 1%;
+}
+/**/
+.shicai .overf .f-l,
+.shicai .overf .f-r{
+	width: 48%;
+	margin: 0 1%;
+}
+.shicai .overf .f-l{
+	margin-left: 0px!important;
+}
+.shicai .overf .f-r{
+	margin-right: 0px!important;
+}
+.shicai .overf img{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 6px;
+}
+.shicai .overf span{
+	display: block;
+	font-size: 13px;
+	line-height: 20px;
+	text-align: justify;
+}
+.shicai .overf p{
+	color: #6d6d6d;
+	display: block;
+	font-size: 12px;
+	line-height: 16px;
+	margin-top: 4px;
+	text-align: justify;
+}
+/**/
+.video{
+	-webkit-box-shadow:0 0 10px #5a5a5a;  
+	-moz-box-shadow:0 0 10px #5a5a5a;  
+	box-shadow:0 0 10px #5a5a5a;
+	cursor: pointer;
+	position: relative;
+}
+.video img{
+	width: 100%;
+	position: absolute;
+	top: 0;
+}

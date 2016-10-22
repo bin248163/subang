@@ -1,0 +1,135 @@
+/*标题*/
+.core-t{
+	width: 100%;
+	overflow: hidden;
+}
+.core-t li{
+	width: 25%;
+	float: left;
+	color: #fff;
+	padding: 10px 0;
+	font-size: 13px;
+	line-height: 16px;
+	text-align: center;
+	background: #818181;
+}
+.core-t li span{
+	display: block;
+	font-size: 12px;
+}
+.core-t .cur{
+	background: #ca040d;
+}
+/*产品简介*/
+.brief .lbox{
+	width: 100%;
+}
+.brief .rbox{
+	width: 96%;
+	padding: 0 2%;
+}
+.brief .lbox .jqzoom img{
+	width: 100%;
+}
+.brief .rbox p{
+	font-size: 18px;
+	text-align: center;
+	margin: 18px 0 10px 0;
+}
+.brief .rbox .pro-price{
+	color: #FFF;
+	display: none;
+	line-height: 18px;
+	padding: 10px 0 10px 24px;
+	background-color: #e62129; 
+}
+.brief .rbox .pro-price label{
+	font-size: 16px;
+}
+.brief .rbox .pro-price span{
+	color: #fff;
+	font-size: 24px;
+	line-height: 26px;
+	letter-spacing: 1px;
+	padding-right: 10px;
+}
+.brief .rbox .size{
+	font-size: 14px;
+	margin-left: 1%;
+	margin-bottom: 10px;
+}
+.brief .rbox .size li{
+	border: 1px solid #dfdfdf;
+	background: #FFFFFF;
+	display: inline-block;
+	padding: 3px;
+	width: 16%;
+	margin-bottom: 6px;
+}
+.brief .rbox .size span{
+	color: #666;
+	display: block;
+	font-size: 12px;
+	text-align: center;
+}
+.brief .rbox .size label{
+	color: #666;
+	font-size: 14px;
+	display: inline-block;
+	padding: 10px 0 6px 2px;
+}
+
+/*产品详情*/
+.detail{
+	width: 100%;
+}
+.detail img{
+	width: 100%;
+}
+.detail .ys{
+	color: #fff;
+	text-align: center;
+	background: #909090;
+	padding: 14px 2%;
+}
+.detail .ys h2{
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.detail .ys span{
+	font-weight: bold;
+}
+.detail .ys p{
+	font-size: 12px;
+	text-align: center;	
+}
+.detail .overf{
+	width: 100%;
+}
+.detail .overf img{
+	width: 100%;
+}
+.detail .overf .f-l,
+.detail .overf .f-r{
+	width: 49%;
+}
+
+/**/
+.des{
+	padding: 10px 0 20px 0;
+}
+.des div{
+	font-size: 12px;
+	line-height: 22px;
+	text-align: center;
+}
+
+/**/
+.crumb{
+	font-size: 12px;
+	text-align: center;
+	margin: 24px 0 16px 0;
+}
+.crumb a{
+	color: #000;
+}

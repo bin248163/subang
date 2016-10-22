@@ -1,0 +1,40 @@
+.change-ban{
+	width: 100%;
+	height: 168px;
+	background: url(../images/change-img/change-ban.jpg) no-repeat center;
+}
+.mb p{
+	color: #fff;
+	font-size: 18px;
+	line-height: 36px;
+	text-align: center;
+	background: #f20000;
+	margin-bottom: 10px;
+}
+.mb .con .g span{
+	display: block;
+	color: #fff;
+	font-size: 18px;
+	line-height: 36px;
+	text-align: center;
+	background: #818181;
+	margin: 26px 0 14px 0;
+}
+.mb .con .g img{
+	margin-bottom: 10px;
+}
+.r-con{
+	width: 96%;
+	padding: 0 2%;
+}
+.r-con img{
+	width: 100%;
+}
+.crumb{
+	font-size: 12px;
+	text-align: center;
+	margin: 16px 0 10px 0;
+}
+.crumb a{
+	color: #000;
+}

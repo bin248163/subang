@@ -1,0 +1,82 @@
+.ser-con{
+	margin-bottom: 30px;
+}
+.ser-con .overf{
+	margin-bottom: 10px;
+}
+.ser-con .overf:last-child{
+	margin-bottom: 0px!important;
+}
+.ser-con .con{
+	width: 44%;
+	margin: 0 3%;
+	float: left;
+}
+.ser-con .con img{
+	width: 100%;
+}
+.ser-con .con p{
+	width: 100%;
+	margin: auto;
+	color: #fff;
+	font-size: 14px;
+	line-height: 30px;
+	text-align: center;
+	background: #d30506;
+}
+.brand{
+	overflow: hidden;
+	padding: 0 4%;
+}
+.brand img{
+	width: 48%;
+	float: left;
+}
+.brand .txt{
+	float: left;
+	width: 48%;
+	margin-left: 4%;
+	margin-top: 3%;
+}
+.brand .txt h1{
+	color: #d50001;
+	font-size: 16px;
+	line-height: 36px;
+	font-weight: bold;
+	text-align: center;
+}
+.brand .txt h2{
+	font-size: 12px;
+	line-height: 20px;
+}
+/**/
+.certificate{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.certificate img{
+	width: 31%;
+	margin: 0 1%;
+	float: left;
+	margin-bottom: 10px;
+}
+/**/
+.advantage{
+	margin: 30px 0 24px 0;
+}
+.advantage .advan{
+	width: 46%;
+	margin: 0 2%;
+	float: left;
+}
+.advantage .advan img{
+	width: 100%;
+}
+.advantage .advan p{
+	font-size: 12px;
+	line-height: 40px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

@@ -1,0 +1,351 @@
+@charset "utf-8";//设置此项才能编译通过有中文的注释的scss文件
+@import "Globalstyle.scss";//插入外部文件：全局样式
+/*
+Author:  yzb123 
+Author URI: http://yzb123.top/
+*/
+$color:#cc1616 !default;//定义全局主色
+$bj:#eee;//定义页面灰色背景
+$width:1180px !default;//定义网站宽度
+$banner:500px !default;//banner高度
+$left:240px !default;//首页左边栏宽度
+$n-left:240px !default;//内页左边栏宽度
+$nav-num:8;//导航个数
+$nav-bj:#777;//导航背景颜色
+$tab-left-bj:#d5d5d5;//首页tab左侧背景颜色
+
+//可重用代码块,通过@include xxx调用 
+//css3动画过渡默认时间0.2s
+@mixin hover($value:.2s){-webkit-transition: all $value;-o-transition: all $value;-moz-transition: all $value;transition: all $value;}
+//单行超出隐藏
+@mixin overflow{text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+//css3三角形 lavue值为三角形的高 value1值为三角形高跟斜边一半的比值越大三角形越高
+@mixin triangle-down($value:5px,$value1:1,$value2:#fff){border-top: $value solid $value2;width: 0;height: 0;border-left: $value/$value1 solid transparent;border-right: $value/$value1 solid transparent;z-index: 0;}
+@mixin triangle-right($value:3px,$value1:1,$value2:#fff) {border-left: $value solid $value2;width: 0;height: 0;border-top: $value/$value1 solid transparent;border-bottom: $value/$value1 solid transparent;z-index: 0;}
+//英文大写
+@mixin en{text-transform: uppercase;}  
+//仿京东before效果 
+@mixin before{left: -120px;width: 80px;height: 300px;top: 0;position: absolute;content: "";
+background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.2),rgba(255,255,255,0));
+background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.2),rgba(255,255,255,0));
+transform: skewx(-25deg);-o-transform: skewx(-25deg);-moz-transform: skewx(-25deg);-webkit-transform: skewx(-25deg);}
+@mixin beforeh{left:100%;@include hover(1s);} 
+
+//部分全局样式
+a{text-decoration:none;color:#2b2b2b;
+    &:hover{color: $color;}
+}
+.w-100{width: 100%;min-width: $width;
+    &:after{display: block;content: "";clear: both;}
+}
+.w-100b{width: 100%;overflow: hidden;min-width: $width;background: $bj;}
+.n-100{width: 100%;overflow: hidden;letter-spacing:-3px; font-size:0;}
+.w-1000{width: $width;margin: 0 auto;overflow: hidden;position: relative;}//内容宽度
+.logo{float: left;width: 229px;}
+.logo-r{float: left;padding-left: 20px;padding-top: 35px;color: #2b2b2b;
+   .p1{font-size: 18px;font-weight: bold;
+       span{color: $color;}
+   }
+   .p2{font-size: 15px;font-weight: bold;}
+}
+.tel{float: right;padding-right: 48px;background: url(../images/dh_05.jpg) no-repeat right top;text-align: right;color: #2b2b2b;margin-top: 40px;
+    p{font-weight: bold;line-height: 20px;
+        span{color: $color;font-size: 18px;}
+    }
+}
+
+//标题部分
+//首页栏目标题
+.h2{text-align: center;font-size: 16px;display: block;line-height: 25px;font-weight: normal;}//首页栏目下方栏目介绍标题
+.h3{font-size: 16px;display: block;line-height: 35px;font-weight: normal;color: $color;font-weight: bold;}//首页子栏目标题
+.h4{font-size: 16px;display: block;line-height: 20px;font-weight: normal;color: $color;color: #fff;}//底部导航标题
+.h5{font-size: 11px;display: block;line-height: 15px;font-weight: normal;color: $color;color: #fff;@include en;}
+
+//header部分
+.header{width: $width;overflow: hidden;margin: auto;}
+
+//导航部分
+.w-nav{width: 100%;min-width:$width;}
+.nav{width: $width;margin: auto;height: 70px;line-height: 70px;padding-top: 20px;
+    ul{
+        li{float: left;position: relative;text-align: center;position: relative;
+            a{font-size: 15px;width: $width/$nav-num;display: block;@include hover(.3s);height:100%;font-weight: 400;} 
+            &:before{width:100%;height:1px;background:#bebebe;content: "";position: absolute;left: 0;bottom: 0;} 
+            &:hover{
+                a{color: $color;}
+                &:before{background:$color;}
+            }  
+            &.this{
+                a{color: $color;}
+                &:before{background:$color;}
+            }         
+        } 
+    } 
+}
+.w0{width: 0;}
+//服务
+.server{padding:80px 0 60px 0;text-align: center;
+    h1{text-align: center;font-size: 18px;line-height: 20px;
+        span{color: $color;}
+    }
+    div{border-bottom: 1px solid #bebebe;display: inline-block;padding: 0 150px;
+        span{color: #9d9d9d;position: relative;display: inline-block;padding: 0 10px;
+            &:before{width: 100%;height: 1px;background: $color;position: absolute;bottom: -1px;left: 0;content: "";}
+        }
+    }
+}
+.s1{border: 1px solid #dadada;width: 351px;float: left;background: #e9e9e9;padding: 19px 0 15px 27px;overflow: hidden;margin-bottom: 20px;@include hover;
+    img{width: 163px;border: 3px solid #fff;float: left;}
+    div{padding-left: 20px;float: left;padding-top: 35px;color: #444;
+        h2{font-size: 16px;line-height: 20px;}
+        span{color: #9d9d9d;}
+    }
+    &:hover{background: $color;
+        div{
+            h2{color: #fff;}
+            span{color: #fff;}
+        }
+    }
+}
+//电话
+.phone{height: 91px; background: url(../images/dhz_15.jpg) no-repeat center;width: 100%;min-width: $width;margin-top: 40px;}
+//tab部分
+.tab-left{width: $left;float: left;padding-right: 15px;
+    ul li{width: 100%;background: $tab-left-bj;border-bottom: 1px solid #fff;position: relative;
+        a{display: block;width: calc(100% - 50px);height: 110px;line-height: 20px;font-size: 18px;padding-left: 50px;
+            p{padding-top: 35px;font-weight: 400;}
+           span{font-size: 12px;}
+        }  
+        i{width:26px;position: absolute;z-index: 1;top:40px ;right:47px;height: 26px;background: url(../images/r.png) no-repeat center;} 
+        &.this{background: $color; 
+           a{color: #fff;}
+        }
+    }
+}
+.tab-right{width: $width - ($left + 15px);float: left;overflow: hidden;}
+.tab-rightn{width: ($width - ($left + 15px))* 10;overflow: hidden;}
+.tab-con{width: $width - ($left + 15px);float: left;@include hover;}
+
+.span-33{
+    img{width: 268px;border: 1px solid #dadada;margin: 0 auto;
+        &:hover{border: 1px solid $color;}
+    }
+    p{font-size: 15px;line-height: 40px;}
+    a{display: inline-block;width: 100px;height: 30px;line-height: 30px;background: $color;text-align: center;margin: 0 10px;color: #fff;margin-bottom: 20px;}
+}
+
+//苦恼
+.kn{background: url(../images/kn_21.jpg) no-repeat center;height: 500px;min-width: 1000px;margin-top: 60px;}
+.sd{background: url(../images/sd_23.jpg) no-repeat center #efeff1;height: 500px;min-width: 1000px;}
+//公司简介
+.phone2{background: url(../images/phone2_30.jpg) no-repeat center;height: 200px;min-width: 1000px;margin-top: 60px;}
+
+ 
+//内页左侧导航
+.n-left{width: $n-left;text-align: center;padding-top: 108px;float: left;border-bottom: 1px solid #fff;
+    .n-left-s{width: 100%;height: 80px;background: url(../images/nl_03.jpg) no-repeat center;
+        p{font-size: 14px;color: #fff;padding-top: 15px;@include en;
+            span{font-size: 18px;font-weight: bold;}
+        }
+    }
+    .n-left-x{padding-top: 17px;}
+}
+.n-right{padding-top: 108px;float: left;width: calc(100% - 284px);margin-left: 36px;
+    .n-right-s{height: 40px;border-bottom: 1px solid #bebebe;
+        h1{padding-left: 32px;background: url(../images/xt_06.jpg) no-repeat left center;float: left;width: calc(50% - 40px);font-size: 18px;}
+        p{float: right;width: 50%;text-align: right;
+            a{color: $color;}
+        }
+    }
+    .n-right-x{font-size: 14px;padding-left: 30px;overflow: hidden;
+        .n-con{background: url(../images/lx_05.jpg) no-repeat right center;}
+        .p1{text-indent: 28px;padding-top: 20px;line-height: 35px;}
+        .p2{color: $color;padding-top: 20px;}
+        .p3{padding-top: 20px;line-height: 35px;}
+        .p4{font-size: 18px;color: $color;padding-top: 20px;}
+        h1{text-align: center;font-size: 30px;line-height: 45px;padding: 15px 0 20px;}
+    }
+}
+.n-video{overflow: hidden;
+    .video1{float: left;width:423px;margin-top: 40px;}
+}
+.honor{width: calc(33.3333% - 14px);float: left;margin-top: 20px;@include hover;
+    img{border: 1px solid #e9e9e9;width: calc(100% - 2px);}
+    p{height: 39px;margin-top: 9px;background: #e9e9e9;line-height: 39px;text-align: center;font-size: 16px;}
+    &:hover{background: $color;
+        img{border: 1px solid $color;}
+        p{background: none;color: #fff;}
+    }
+}
+.n-news{margin-top: 55px;overflow: hidden;
+    img{float: left;width: 212px;margin-right: 30px;float: left;}
+    ul{width: calc(100% - 242px);float: left;margin-top: 40px;
+        li{border-bottom: 1px dashed #d1d1d1;height: 35px;position: relative;padding-top: 5px;
+            i{position: absolute;left: 7px;top: 18px;@include triangle-right(6px,1.1,#d6d6d6);display: block}
+            a{padding-left: 22px;float: left;width: 500px;@include overflow;font-size: 14px;line-height: 35px;}
+            span{float: right;line-height: 35px;color: #666;}
+            &:hover{
+                i{@include triangle-right(6px,1.1,$color);}
+            }
+        }
+    }
+}
+
+//点击滚动
+.gd{width:100%;height:auto;position:relative;
+    p{position: absolute;left: 0;top: -25px;font-size: 15px;
+        span{color: $color;}
+    }
+}
+.gd_prev{height: 24px; font-size: 20px;line-height: 24px;position: absolute;top: -25px;right: 26px;z-index: 9;font-family: "宋体";background: $color;color: #fff;cursor: pointer;width: 24px;text-align: center;}
+.gd_next{height: 24px; font-size: 20px;line-height: 24px;position: absolute;top: -25px;right: 0;z-index: 9;font-family: "宋体";background: $color;color: #fff;cursor: pointer;width: 24px;text-align: center;}
+.gd_main{width:10000px;overflow:hidden;position:relative;z-index:1;border-top: 1px solid #bebebe;padding-top: 24px;margin-top: 70px;
+    div{width:$width;float:left;
+        span{width:(($width) / 4) - 20px;padding:0 10px;display:block;float:left;
+            a{display:block;
+                img{border: 3px solid #dadada;}
+            }
+        }
+    }
+}
+.gd_main_a2{width:100%;height:25px;text-align:center;line-height:25px;background: #d6d6d6;display: block}
+
+//滚动展示默认宽度为$with宽度，小图片宽度默认为$with宽度的（1/5）-6px
+.demo {background: #FFF;overflow:hidden;width: 100%; 
+    img {border: 5px solid #fff;}
+}
+.indemo {float: left;width: 800%; overflow:hidden}
+.demo1 {float: left;
+    a{ display:block; width:$width / 5;float:left;margin-right:10px; 
+        img{ float:left;padding:3px; border:1px solid #d6d6d6; width:($width / 5)-6px; overflow:hidden} 
+        span{ float:left; font-size:12px; text-align:center; width:100%} 
+    }
+}
+.demo2 {float: left;
+    a{ display:block; width:$width / 5;float:left;margin-right:10px; 
+        img{ float:left;padding:3px; border:1px solid #d6d6d6; width:($width / 5)-6px; overflow:hidden} 
+        span{ float:left; font-size:12px; text-align:center; width:100%} 
+    }
+}
+
+//首页下方新闻资讯
+.news{width:($width - 30px)/3;float: left;
+    ul{padding-top: 10px;
+        li{width: 100%;overflow: hidden;font-size: 14px;line-height: 28px;height: 28px;
+            i{width: 4px;float: left;height: 4px;background:#444444;border-radius: 4px;margin: 14px 6px 0 5px;}
+            a{float: left;width: 70%;@include overflow;}
+            span{float: right;font-size: 12px;color: #777;}
+            &:hover i{background: $color;}
+        }
+    }
+}
+
+//友情链接
+.link-w{background: $color;overflow: hidden;min-width: $width;margin-top: 60px;}
+.link1{width:759px;margin:20px auto;overflow: hidden;padding: 10px 0;float: left;
+    h2{font-size: 18px;color: #fff;font-weight: 300;padding-bottom: 15px;}
+    a{width: 120px;display: block;float: left;color: #fff;padding-bottom: 10px;
+        &:hover{text-decoration: underline;}
+    }
+}
+.link2{width:calc(100% - 780px);margin:20px auto;overflow: hidden;padding: 10px 0 0 20px;float: left;border-left:1px solid #fff ;
+    h2{font-size: 18px;color: #fff;font-weight: 300;padding-bottom: 15px;}
+    a{width: 100px;display: block;float: left;color: #fff;padding-bottom: 10px;
+        &:hover{text-decoration: underline;}
+    }
+}
+
+//底部样式
+.bottom{width: 100%;padding: 20px 0;overflow: hidden;background: #272727;min-width: $width;}
+.bot1{padding:0 30px;float: left;
+    ul{padding-top: 10px;
+        li{line-height: 28px;
+            a{color: #ccc;
+                &:hover{color: $color;text-decoration: underline;}
+            }
+        }
+    }
+}
+.ewm{width: 300px;float: right;overflow: hidden;
+    img{float: right;width: 117px;}
+    p{text-align: right;float: left;width: 150px;}
+}
+.bottom1{width: 100%;padding: 30px 0 10px;overflow: hidden;background: #efeeed;min-width: $width;z-index: 9;position: relative;font-size: 12px;
+    .bot-p1{width: 500px;float: left;}
+    .bot-p2{float: left;
+        a{padding-right:10px;}
+        img{width: 20px;height: 20px;}
+    }
+}
+.cnzz{width: 20px;height: 20px;display: inline-block;}
+
+.qq{position: fixed;top: 40%;right: 0;overflow: hidden;}
+
+//首页banner样式 更改banner高度只需更改此文件头部定义$banner函数值
+.flexslider {position: relative;width: 100%;height: $banner;zoom: 1;margin-bottom: 15px;background: #eee;
+    .slides li {width: 100%;height: 100%;
+         a img{width: 100%;height: $banner;}
+    }
+}
+.flex-direction-nav{
+    a {width: 70px;height: 70px;text-align:center;color:$color;font-size:60px;line-height:70px;font-family:'宋体';overflow: hidden;margin: -35px 0 0;display: block;
+      position: absolute;top: 50%;z-index: 10;cursor: pointer;opacity: 0;filter: alpha(opacity=0);-webkit-transition: all .3s ease;}
+    .flex-next {right: 0;@include hover;}
+    .flex-prev {left: 0;@include hover;}
+}
+.flexslider:hover{   
+    .flex-next {opacity: 0.7;filter: alpha(opacity=70);}
+    .flex-prev {opacity: 0.7;filter: alpha(opacity=70);}
+}
+.flexslider:hover .flex-next:hover,
+.flexslider:hover .flex-prev:hover {opacity: 1;filter: alpha(opacity=100);}
+.flex-control-nav {width: 100%;position: absolute;bottom: -30px;text-align: center;z-index: 1;
+    li {margin: 0 3px;display: inline-block;zoom: 1;*display: inline;}
+}
+.flex-control-paging li a {height: 2px;width: 40px;background:#bebebe;display: block;overflow: hidden;cursor: pointer;line-height: 99em;}
+.flex-control-paging li a.flex-active,
+.flex-control-paging li.active a {background:$color;}
+
+//子页新闻列表页下方分页样式
+.paging{width: 100%;padding: 20px 0;text-align: center;line-height: 40px;
+    a{padding: 3px 10px;font-size: 13px; margin: 0 1px;}
+    .active{color: $color;background: #ddd;}
+}
+.paga{border:1px solid #d6d6d6;color: $color;@include hover;
+    &:hover{color: #fff;background: $color;}
+}
+//css3文字图标
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?s4ktjp');
+  src:  url('fonts/icomoon.eot?s4ktjp#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?s4ktjp') format('truetype'),
+    url('fonts/icomoon.woff?s4ktjp') format('woff'),
+    url('fonts/icomoon.svg?s4ktjp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@media screen and(max-width:$width){
+
+}
+
+
+
+
+
+

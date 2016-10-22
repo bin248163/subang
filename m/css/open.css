@@ -1,0 +1,24 @@
+.vs{
+	overflow: hidden;
+	padding: 0 4%;
+}
+.vs .photo{
+	width: 40%;
+	float: left;
+}
+.vs .photo img{
+	width: 100%;
+}
+.vs .photo p{
+	font-size: 14px;
+	margin: 10px 0 6px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.vs .vs-img{
+	width: 14%;
+	margin: 0 3%;
+	float: left;
+	margin-top: 44px;
+}
